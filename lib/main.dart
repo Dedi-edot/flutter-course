@@ -1,17 +1,7 @@
-// import 'package:course/list_generate.dart';
-// import 'package:course/list_tile_extract.dart';
-// import 'package:course/mapping_list.dart';
-// import 'package:course/gridview.dart';
-import 'package:course/dismissible_list.dart';
-// import 'package:course/show_dialog.dart';
-// import 'package:course/text_field.dart';
-// import 'package:course/top_tab_bar.dart';
-// import 'package:course/statefull.dart';
-// import 'package:course/list_tile.dart';
-// import 'package:course/list_view_separated.dart';
+import 'package:course/routing/page1.dart';
+import 'package:course/routing/page3.dart';
 import 'package:flutter/material.dart';
-
-// import 'list_view.dart';
+import 'routing/page2.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,7 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: DismissibleList(),
+      home: Page1(),
+      initialRoute: Page1.nameRoute,
+      routes: {
+        Page1.nameRoute : (context) => Page1(),
+        Page2.nameRoute : (context) => Page2(),
+        Page3.nameRoute : (context) => Page3(),
+      },
     );
   }
 }
