@@ -45,7 +45,8 @@ class Page1 extends StatelessWidget {
             ),
           ),
         ],
-      )),
+      )
+      ),
       body: Center(
         child: Text(
           "Page 1",
