@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import './providers/colors.dart';
+import './providers/products.dart';
 import './pages/home_page.dart';
-import './pages/add_color_page.dart';
+import './pages/add_product_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,13 +12,14 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => MultiColor(),
-      builder: (context, child) => MaterialApp(
+    return ChangeNotifierProvider<Products>(
+      create: (context) => Products(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: HomePage(),
         routes: {
           HomePage.routeName: (ctx) => HomePage(),
-          AddColorPage.routeName: (ctx) => AddColorPage(),
+          AddProductPage.routeName: (ctx) => AddProductPage(),
         },
       ),
     );

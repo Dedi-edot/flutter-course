@@ -22,7 +22,7 @@ class _ProductItemState extends State<ProductItem> {
 
   @override
   void initState() {
-    // TODO: implement initState
+    
     super.initState();
     List<Color> randomColor = [
       Colors.amber,
